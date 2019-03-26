@@ -25,7 +25,25 @@ body {
     font-size: 36px;
 }
 
-#nyanCat {
-    left:0;
-    top:0;
+@keyframes move {
+    0% {
+        transform:translateX(0);;
+        }
+    100% {
+        transform:translate(100vw,100vh);;
+        }
 }
+
+#nyanCat {
+    position:relative;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-iteration-count:infinite; 
+}
+
+/*tryout animation
+p {
+    position:relative;
+    animation:move;
+    animation-duration: 5s;
+}*/
