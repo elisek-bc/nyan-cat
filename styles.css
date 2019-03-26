@@ -1,0 +1,31 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#meowbutton {
+    margin:auto;
+    display:block;
+    height: 50px;
+    width: 200px;
+    left: 50%;
+    top: 50%;
+    margin-top: -25px;
+    margin-left: -100px;
+    position: fixed;
+    background-color: darkblue;
+    border: none;
+    color: white;
+    border-radius: 25px;
+    font-family: "teko", sans-serif;
+    text-transform: uppercase;
+    font-size: 36px;
+}
+
+#nyanCat {
+    left:0;
+    top:0;
+}

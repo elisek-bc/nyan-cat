@@ -14,7 +14,30 @@
 
     <body>
 
+        <!--this is the button-->
+        <button id="meowbutton">Meow!</button>
+        
+        <!--Javascript starts here-->
         <script>
+        
+        // creating variable button and cat
+        var meow = document.getElementById('meowbutton');
+        var nyanCat = document.getElementById('nyancat');
+
+        // 3 steps: on what, when, function?    
+        meow.addEventListener('click',createElement());
+
+        // specifying function on click
+        document.body.createElement('img')
+        img.src = 'nyancatrainbow.png';
+        img.id = 'nyanCat';
+        document.body.appendChild('nyanCat');
+        
+        // specifying background style
+            if (nyanCat) {
+                document.body.style.backgroundImage.url('nyancatbackground.gif');
+            }
+
         </script>
 
     </body> 
