@@ -18,21 +18,28 @@
         <button id="meowbutton">Meow!</button>
         <p>BROL</p>
         <!--Javascript starts here-->
+        
         <script>
         
-        // creating variable button and cat
+        // creating variable button
         var meow = document.getElementById('meowbutton');
-        var nyanCat = document.getElementById('nyancat');
 
         // 3 steps: on what, when, function?    
-        meow.addEventListener('click',createElement());
+        meow.addEventListener('click',addImageToBody('nyanCat'));
 
-        // specifying function on click
-        document.body.createElement('img')
-        img.src = 'nyancatrainbow.png';
-        img.id = 'nyanCat';
-        document.body.appendChild('nyanCat');
-        
+        // specifying function on click and creating cat var
+        function addImageToBody() {
+
+        if (document.getElementById('nyancat')) { 
+            return;
+        }
+            var nyanCat = document.getElementById('nyancat');
+            document.body.createElement('img');
+            img.src = 'nyancatrainbow.png';
+            img.id = 'nyancat';
+            document.body.appendChild('nyanCat');
+        console.log()
+
         // specifying background style
             if (nyanCat) {
                 document.body.style.backgroundImage.url('nyancatbackground.gif');
