@@ -24,33 +24,46 @@
         var meow = document.getElementById('meowbutton');
 
     // 3 steps: on what, when, function?    
-        meow.addEventListener('click',addImageToBody);
+        meow.addEventListener('click', everything);
 
     // specifying function on click and creating cat var
-        function addImageToBody() {
+        function everything() {
             var nyanCat = document.createElement('img');
             nyanCat.src = 'nyancatrainbow.png';
-            nyanCat.class = 'nyanCat';
+            nyanCat.classList.add('nyanCat');
+            nyanCat.classList.add('nyanCat-start');
             nyanCat.style.height = '60px';
             nyanCat.style.transform = 'rotate(45deg)';
-            document.body.appendChild(nyanCat);       
+            document.body.appendChild(nyanCat);
 
     // specifying background style
-            if (nyanCat) {;
+            if (nyanCat) {
                 document.body.style.backgroundImage = "url('nyancatbackground.gif')";
                 document.body.style.backgroundSize = '30vh';
+                /*
+                var meow = document.getElementById('meowbutton');
+                meow.parentNode.removeChild(image);
+                */}
+
+    //animation thing
+    setTimeout(function(){
+        nyanCat.classList.add('nyanCat-end');
+                },100);
                 
-                function removeButton() {
-                    meow.parentNode.removeChild(meow);
-                }
 
                 //nyanCat animation should start
                 //how the fuck link CSS animation here?
+                //should I change classes of nyanCat?
+                //should I do something with toggle?
             }
-
         
-        }
         
+        /*stop animation after 10 seconds
+        setTimeout(function(){
+            function removeCat() {
+                    nyanCat.parentNode.removeChild(nyanCat);
+                },10000);
+        }*/
 
             console.log()
         </script>
