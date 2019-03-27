@@ -26,7 +26,7 @@ body {
 }
 
 .nyanCat {
-    transition:3s;
+    transition:5s;
     position:fixed;
 }
 .nyanCat-end {
