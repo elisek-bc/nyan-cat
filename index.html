@@ -16,7 +16,6 @@
 
     <!--this is the button-->
         <button id="meowbutton">Meow!</button>
-        <p>BROL</p>
 
     <!--Javascript starts here-->
         <script>
@@ -32,16 +31,27 @@
             var nyanCat = document.createElement('img');
             nyanCat.src = 'nyancatrainbow.png';
             nyanCat.class = 'nyanCat';
-            document.body.appendChild(nyanCat);
-        
+            nyanCat.style.height = '60px';
+            nyanCat.style.transform = 'rotate(45deg)';
+            document.body.appendChild(nyanCat);       
 
     // specifying background style
             if (nyanCat) {;
                 document.body.style.backgroundImage = "url('nyancatbackground.gif')";
-                document.body.style.backgroundSize = '30vh'
-                documant.body.style.backgroundRepeat = 'repeat'
+                document.body.style.backgroundSize = '30vh';
+                
+                function removeButton() {
+                    meow.parentNode.removeChild(meow);
+                }
+
+                //nyanCat animation should start
+                //how the fuck link CSS animation here?
             }
+
+        
         }
+        
+
             console.log()
         </script>
 

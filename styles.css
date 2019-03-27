@@ -25,25 +25,16 @@ body {
     font-size: 36px;
 }
 
-@keyframes move {
-    0% {
-        transform:translateX(0);;
-        }
-    100% {
-        transform:translate(100vw,100vh);;
-        }
-}
-
 .nyanCat {
-    position:relative;
-    animation-name: move;
-    animation-duration: 10s;
-    animation-iteration-count: infinite; 
+    transition:3s;
 }
 
-/*
-p {
-    position:relative;
-    animation:move;
-    animation-duration: 5s;
-}*/
+.nyanCat-start {
+    left:0;
+    top:0;
+}
+
+.nyanCat-end {
+    left: 100vw;
+    top: 100vh;
+}
