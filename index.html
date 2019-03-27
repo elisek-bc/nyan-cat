@@ -21,29 +21,28 @@
     <!--Javascript starts here-->
         <script>
         
-    // creating variable buttons
+    // creating variable button
         var meow = document.getElementById('meowbutton');
-        var nyanCat = document.getElementById('nyancat')
 
     // 3 steps: on what, when, function?    
-        meow.addEventListener('click',addImageToBody('nyanCat'));
+        meow.addEventListener('click',addImageToBody);
 
     // specifying function on click and creating cat var
         function addImageToBody() {
-            var nyanCat = document.getElementById('nyancat');
-            document.body.createElement('img');
-            img.src = 'nyancatrainbow.png';
-            img.id = 'nyancat';
-            document.body.appendChild('nyanCat');
-        }
-        console.log()
+            var nyanCat = document.createElement('img');
+            nyanCat.src = 'nyancatrainbow.png';
+            nyanCat.class = 'nyanCat';
+            document.body.appendChild(nyanCat);
+        
 
     // specifying background style
-            if (nyanCat) {
-                document.body.style.backgroundImage.url('nyancatbackground.gif');
-                document.body.style.backgroundSize = 'cover'
+            if (nyanCat) {;
+                document.body.style.backgroundImage = "url('nyancatbackground.gif')";
+                document.body.style.backgroundSize = '30vh'
+                documant.body.style.backgroundRepeat = 'repeat'
             }
-        
+        }
+            console.log()
         </script>
 
     </body> 

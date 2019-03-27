@@ -34,7 +34,7 @@ body {
         }
 }
 
-#nyanCat {
+.nyanCat {
     position:relative;
     animation-name: move;
     animation-duration: 10s;
