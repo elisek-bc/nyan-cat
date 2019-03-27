@@ -26,46 +26,72 @@
     // 3 steps: on what, when, function?    
         meow.addEventListener('click', everything);
 
+//if (timing is < 10000){ loop function everything()}
+
     // specifying function on click and creating cat var
         function everything() {
-            var nyanCat = document.createElement('img');
-            nyanCat.src = 'nyancatrainbow.png';
-            nyanCat.classList.add('nyanCat');
-            nyanCat.classList.add('nyanCat-start');
-            nyanCat.style.height = '60px';
-            nyanCat.style.transform = 'rotate(45deg)';
-            document.body.appendChild(nyanCat);
+            createCats();
+            var cats = document.body.querySelectorAll('.nyanCat');
 
-    // specifying background style
-            if (nyanCat) {
+    // specifying background style + deleting button
+            if (cats !=null) {
                 document.body.style.backgroundImage = "url('nyancatbackground.gif')";
                 document.body.style.backgroundSize = '30vh';
                 
                 var meow = document.getElementById('meowbutton');
                 meow.parentNode.removeChild(meow);
+
+                var nyanAudio = document.createElement('audio');
+                nyanAudio.src = 'nyancatsound.mp3';
+                document.body.appendChild(nyanAudio);
+                nyanAudio.play()
+    //audio not working yet
             }
 
-    //animation thing
-    setTimeout(function(){
-        nyanCat.classList.add('nyanCat-end');
-                },100);
-                
 
-                //nyanCat animation should start
-                //how the fuck link CSS animation here?
-                //should I change classes of nyanCat?
-                //should I do something with toggle?
-            }
-        
-        
-        /*stop animation after 10 seconds
+    // working animation
+    cats.forEach(function(cat){
         setTimeout(function(){
-            function removeCat() {
-                    nyanCat.parentNode.removeChild(nyanCat);
-                },10000);
-        }*/
+        var x = Math.floor(Math.random()*parseInt(document.body.clientWidth));
+        var y = parseInt(window.innerHeight)+100;
+        cat.style.left = x + 'px';
+        cat.style.top = y + 'px';},100);
+    });
+      
 
-            console.log()
+    // stops animation after 10sec            
+    setTimeout(function(){
+        return;},10000);      
+        }
+
+        console.log()
+
+/*================================================*/
+    
+    function createCats (){
+            var numCats = 20;
+
+            for (var i = 0; i<numCats; i++) {
+            var nyanCat = document.createElement('img');
+            nyanCat.src = 'nyancatrainbow.png';
+           // nyanCat.classList.add('nyanCat-start');
+
+    // random positioning start
+            var x = Math.floor(Math.random()*parseInt(document.body.clientWidth));
+            nyanCat.style.left = x + 'px';
+            nyanCat.style.top = '-100px'; 
+
+            //var startposition = 'nyanCat-start'
+            //startposition = nyanCatX , nyanCatY;
+
+    // styling and placing
+            nyanCat.style.height = '60px';
+            nyanCat.style.transform = 'rotate(45deg)';
+            document.body.appendChild(nyanCat);
+            nyanCat.classList.add('nyanCat');
+            }
+            }
+
         </script>
 
     </body> 

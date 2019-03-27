@@ -29,12 +29,6 @@ body {
     transition:3s;
     position:fixed;
 }
-
-.nyanCat-start {
-    left:0;
-    top:0;
-}
-
 .nyanCat-end {
     left: 100vw;
     top: 100vh;
