@@ -72,9 +72,8 @@
                 var meow = document.getElementById('meowbutton');
                 meow.parentNode.removeChild(meow);
 
-                var nyanAudio = document.createElement('audio');
+                var nyanAudio = new Audio();
                 nyanAudio.src = 'nyancatsound.mp3';
-                document.body.appendChild(nyanAudio);
                 nyanAudio.play();
     // audio not working yet!!! due to: Uncaught (in promise) DOMException
             }
@@ -85,7 +84,7 @@
 /*======================== WORKING TILL HERE: everything after blocks the rest!========================*/
 
     // and stopping after 10 seconds: not working!!!!   
-        var intervalStop = clearInterval(loopCats);
+        /*var intervalStop = clearInterval(loopCats);
         setTimeout(intervalStop,10000);
 
     // delete cats after they passed end of screen: not working!!!!
@@ -93,7 +92,7 @@
             var nyanCat = document.createElement('img');
             nyanCat.src = 'nyancat.gif';
             document.body.removeChild(nyanCat);
-        }
+        }*/
               
     }
 /*========================END OF EVERYTHING=========================*/   
