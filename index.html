@@ -33,7 +33,7 @@
             createCats();
             var cats = document.body.querySelectorAll('.nyanCat');
 
-/*==========================================*/
+/*====================================================*/
     
         function createCats (){
             var numCats = 20;
@@ -41,7 +41,6 @@
             for (var i = 0; i<numCats; i++) {
                 var nyanCat = document.createElement('img');
                 nyanCat.src = 'nyancat.gif';
-
 
     // random positioning start
                 var x = Math.floor(Math.random()*parseInt(document.body.clientWidth));
@@ -54,7 +53,9 @@
                 document.body.appendChild(nyanCat);
                 nyanCat.classList.add('nyanCat');
                 }
+    // randomize rotation here
             }
+
 
     // specifying background style + deleting button
             if (cats !=null) {
@@ -68,7 +69,7 @@
                 nyanAudio.src = 'nyancatsound.mp3';
                 document.body.appendChild(nyanAudio);
                 nyanAudio.play()
-    //audio not working yet
+    //audio not working yet!!!
             }
 
     // working animation
@@ -78,6 +79,9 @@
                 var y = parseInt(window.innerHeight)+100;
                 cat.style.left = x + 'px';
                 cat.style.top = y + 'px';
+        // randomize speed here
+                var speed = Math.floor(Math.random()*10)+3;
+                cat.style.transition = speed + 's';
             },100);
         });       
         }
