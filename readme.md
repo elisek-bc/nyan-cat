@@ -1,6 +1,6 @@
-#Nyan Cat Javascript assignment
+# Nyan Cat Javascript assignment
 
-You can find the link to this assignment here:
+You can find the link to this assignment here: https://elisek-bc.github.io/nyan-cat/
 
 ## Contributors
 
