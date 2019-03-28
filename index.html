@@ -33,6 +33,29 @@
             createCats();
             var cats = document.body.querySelectorAll('.nyanCat');
 
+/*==========================================*/
+    
+        function createCats (){
+            var numCats = 20;
+
+            for (var i = 0; i<numCats; i++) {
+                var nyanCat = document.createElement('img');
+                nyanCat.src = 'nyancat.gif';
+
+
+    // random positioning start
+                var x = Math.floor(Math.random()*parseInt(document.body.clientWidth));
+                nyanCat.style.left = x + 'px';
+                nyanCat.style.top = '-100px'; 
+
+    // styling and placing
+                nyanCat.style.height = '60px';
+                nyanCat.style.transform = 'rotate(45deg)';
+                document.body.appendChild(nyanCat);
+                nyanCat.classList.add('nyanCat');
+                }
+            }
+
     // specifying background style + deleting button
             if (cats !=null) {
                 document.body.style.backgroundImage = "url('nyancatbackground.gif')";
@@ -50,13 +73,14 @@
 
 
     // working animation
-    cats.forEach(function(cat){
-        setTimeout(function(){
-        var x = Math.floor(Math.random()*parseInt(document.body.clientWidth));
-        var y = parseInt(window.innerHeight)+100;
-        cat.style.left = x + 'px';
-        cat.style.top = y + 'px';},100);
-    });
+        cats.forEach(function(cat){
+            setTimeout(function(){
+                var x = Math.floor(Math.random()*parseInt(document.body.clientWidth));
+                var y = parseInt(window.innerHeight)+100;
+                cat.style.left = x + 'px';
+                cat.style.top = y + 'px';
+            },100);
+        });
       
 
     // stops animation after 10sec            
@@ -66,28 +90,7 @@
 
         console.log()
 
-/*================================================*/
-    
-    function createCats (){
-            var numCats = 20;
 
-            for (var i = 0; i<numCats; i++) {
-            var nyanCat = document.createElement('img');
-            nyanCat.src = 'nyancat.gif';
-           // nyanCat.classList.add('nyanCat-start');
-
-    // random positioning start
-            var x = Math.floor(Math.random()*parseInt(document.body.clientWidth));
-            nyanCat.style.left = x + 'px';
-            nyanCat.style.top = '-100px'; 
-
-    // styling and placing
-            nyanCat.style.height = '60px';
-            nyanCat.style.transform = 'rotate(45deg)';
-            document.body.appendChild(nyanCat);
-            nyanCat.classList.add('nyanCat');
-            }
-            }
 
         </script>
 
