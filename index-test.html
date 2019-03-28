@@ -23,9 +23,9 @@
     // creating variable button
         var meow = document.getElementById('meowbutton');
 
-    /*====================== ONE CAT IS ALL IT TAKES ==============================*/
+        /*====================================================*/
     
-        function createCat (){
+        function createCats (){
             console.log('create cats start');
             var numCats = 20;
 
@@ -43,33 +43,37 @@
                 nyanCat.style.transform = 'rotate(45deg)';
                 document.body.appendChild(nyanCat);
                 nyanCat.classList.add('nyanCat');
-
-                setTimeout(function(){
-                    var x = Math.floor(Math.random()*parseInt(document.body.clientWidth));
-                    var y = parseInt(window.innerHeight)+200;
-                    nyanCat.style.left = x + 'px';
-                    nyanCat.style.top = y + 'px';
-
-    // randomize speed here
-                    var speed = Math.floor(Math.random()*10)+3;
-                    nyanCat.style.transition = speed + 's';
-
-    // randomize rotation here
-                    var dontFallOnYourFace = Math.floor(Math.random()*360)
-                    nyanCat.style.transform = "rotate(" + dontFallOnYourFace + "deg)";
-                },100);
-                };
             }
+            var cats = document.body.querySelectorAll('.nyanCat');
+
+    // working animation
+        cats.forEach(function(cat){
+            setTimeout(function(){
+                var x = Math.floor(Math.random()*parseInt(document.body.clientWidth));
+                var y = parseInt(window.innerHeight)+200;
+                cat.style.left = x + 'px';
+                cat.style.top = y + 'px';
+    // randomize speed here
+                var speed = Math.floor(Math.random()*10)+3;
+                cat.style.transition = speed + 's';
+    // randomize rotation here
+                var dontFallOnYourFace = Math.floor(Math.random()*360)
+                cat.style.transform = "rotate(" + dontFallOnYourFace + "deg)";
+            },100);
+        });   
+        }
 
     // 3 steps: on what, when, function?    
         meow.addEventListener('click', everything);
 
     // specifying function on click and creating cat var
         function everything() {
-            createCat();
+            createCats();
+            var cats = document.body.querySelectorAll('.nyanCat');
 
-    // specifying background style + deleting button + playing audio
-            if (createCat) {
+
+    // specifying background style + deleting button
+            if (cats !=null) {
                 document.body.style.backgroundImage = "url('nyancatbackground.gif')";
                 document.body.style.backgroundSize = '30vh';
                 
@@ -86,7 +90,7 @@
        
       
     // loops animation every 3 seconds: does not work! Zal enkel elke 3 seconden 20 katten creeren maar niet animeren..? 
-        var loopCats = window.setInterval(createCat, 250);
+        var loopCats = window.setInterval(createCats, 1000);
         console.log(loopCats);
     
     // stops animation after 10sec: does not work!            
