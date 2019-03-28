@@ -16,4 +16,10 @@ It's a dynamic page build up with HTML CSS and Javascript with falling kitties i
 
 ## Struggles
 
-TBC
+1. Linking css code to JS and HTML (using classes)
+
+2. Making audio work
+
+3. Make loop stop after 10 seconds
+
+4. Remove kitties from page

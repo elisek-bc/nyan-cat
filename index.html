@@ -82,11 +82,18 @@
     // loops animation every 3 seconds: working
         var loopCats = setInterval(createCat, 1000);
 
+/*======================== WORKING TILL HERE: everything after blocks the rest!========================*/
+
     // and stopping after 10 seconds: not working!!!!   
         var intervalStop = clearInterval(loopCats);
         setTimeout(intervalStop,10000);
 
-    // delete cats after they passed end of screen
+    // delete cats after they passed end of screen: not working!!!!
+        if (nyanCat.style.top > '100vh'); {
+            var nyanCat = document.createElement('img');
+            nyanCat.src = 'nyancat.gif';
+            document.body.removeChild(nyanCat);
+        }
               
     }
 /*========================END OF EVERYTHING=========================*/   
