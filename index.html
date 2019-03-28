@@ -26,8 +26,6 @@
     // 3 steps: on what, when, function?    
         meow.addEventListener('click', everything);
 
-//if (timing is < 10000){ loop function everything()} //setInterval!!!!set timeOut met clearInterval (OPZOEKEN)
-
     // specifying function on click and creating cat var
         function everything() {
             createCats();
@@ -53,7 +51,6 @@
                 document.body.appendChild(nyanCat);
                 nyanCat.classList.add('nyanCat');
                 }
-    // randomize rotation here
             }
 
 
@@ -69,30 +66,33 @@
                 nyanAudio.src = 'nyancatsound.mp3';
                 document.body.appendChild(nyanAudio);
                 nyanAudio.play()
-    //audio not working yet!!!
+    // audio not working yet!!!
             }
 
     // working animation
         cats.forEach(function(cat){
             setTimeout(function(){
                 var x = Math.floor(Math.random()*parseInt(document.body.clientWidth));
-                var y = parseInt(window.innerHeight)+100;
+                var y = parseInt(window.innerHeight)+200;
                 cat.style.left = x + 'px';
                 cat.style.top = y + 'px';
         // randomize speed here
                 var speed = Math.floor(Math.random()*10)+3;
                 cat.style.transition = speed + 's';
+        // randomize rotation here: does not work...
+                var dontFallOnYourFace = Math.floor(Math.random()*360)
+                cat.style.transform = "rotate(" + dontFallOnYourFace + "deg)";
             },100);
         });       
         }
         
 /*========================END OF EVERYTHING=========================*/
         
-    // loops animation every 3 seconds  
+    // loops animation every 3 seconds: does not work! 
         window.setInterval(everything(), 3000);
         var loopcats = window.setInterval(everything(), 3000);
 
-    // stops animation after 10sec            
+    // stops animation after 10sec: does not work!            
         window.setTimeout(clearInterval(loopcats),10000);
         console.log()
 
