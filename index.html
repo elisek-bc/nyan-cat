@@ -71,7 +71,6 @@
     //audio not working yet
             }
 
-
     // working animation
         cats.forEach(function(cat){
             setTimeout(function(){
@@ -80,17 +79,18 @@
                 cat.style.left = x + 'px';
                 cat.style.top = y + 'px';
             },100);
-        });
-      
+        });       
+        }
+        
+/*========================END OF EVERYTHING=========================*/
+        
+    // loops animation every 3 seconds  
+        window.setInterval(everything(), 3000);
+        var loopcats = window.setInterval(everything(), 3000);
 
     // stops animation after 10sec            
-    setTimeout(function(){
-        return;},10000);      
-        }
-
+        window.setTimeout(clearInterval(loopcats),10000);
         console.log()
-
-
 
         </script>
 
