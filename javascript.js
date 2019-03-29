@@ -52,13 +52,10 @@
 
                 var nyanAudio = new Audio('nyancatsong.mp3');
                 nyanAudio.play();  
-    // audio not working yet!!!
             }
 
     // loops animation every 3 seconds: working
     var loopCats = setInterval(createCat, 500);
-
-/*======================== WORKING TILL HERE: everything after blocks the rest!========================*/
 
     // and stopping after 10 seconds: not working!!!!   
     setTimeout(intervalStop,10000);
