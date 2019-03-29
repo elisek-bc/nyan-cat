@@ -68,20 +68,22 @@
                 var meow = document.getElementById('meowbutton');
                 meow.parentNode.removeChild(meow);
 
-                var nyanAudio = new Audio();
-                nyanAudio.src = 'nyancatsound.mp3';
-                nyanAudio.play();
+                var nyanAudio = new Audio('nyancatsound.mp3');
+                nyanAudio.play();  
     // audio not working yet!!! due to: Uncaught (in promise) DOMException
             }
 
     // loops animation every 3 seconds: working
-        var loopCats = setInterval(createCat, 1000);
+    var loopCats = setInterval(createCat, 1000);
 
 /*======================== WORKING TILL HERE: everything after blocks the rest!========================*/
 
     // and stopping after 10 seconds: not working!!!!   
-        /*var intervalStop = clearInterval(loopCats);
-        setTimeout(intervalStop,10000);*/
+    setTimeout(intervalStop,10000);
+        function intervalStop() {
+             clearInterval(loopCats);
+        }
+        
 
     // delete cats after they passed end of screen: not working!!!!
         /*if (nyanCat.style.top > '100vh'); {
