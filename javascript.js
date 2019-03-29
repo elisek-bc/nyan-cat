@@ -50,13 +50,13 @@
                 var meow = document.getElementById('meowbutton');
                 meow.parentNode.removeChild(meow);
 
-                var nyanAudio = new Audio('nyancatsound.mp3');
+                var nyanAudio = new Audio('nyancatsong.mp3');
                 nyanAudio.play();  
     // audio not working yet!!!
             }
 
     // loops animation every 3 seconds: working
-    var loopCats = setInterval(createCat, 1000);
+    var loopCats = setInterval(createCat, 500);
 
 /*======================== WORKING TILL HERE: everything after blocks the rest!========================*/
 
